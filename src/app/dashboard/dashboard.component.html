@@ -1,0 +1,301 @@
+<body>
+
+<style>
+    .navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+    
+  }
+  
+  .dropdown-submenu {
+    position: relative;
+  }
+  
+  .dropdown-submenu > .dropdown-menu {
+    top: 0;
+    margin-top: 0; /* Remove the negative margin-top */
+    left: 100%;
+  }
+
+  .centered-content {
+      
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(180, 213, 243);
+      height: 100%; /* Ensure the div takes up the full height of its parent */
+    }
+    </style>
+  
+  
+  
+  <div class="header">
+    <nav class="navbar top-navbar navbar-expand-md navbar-light">
+        <!-- Logo -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="">
+                <!-- Logo icon -->
+                <b><img src="./assets/dencefusion_logo.jpg" width="50px" height="50px" alt="homepage" /></b>
+                <span><img src="./assets/dence _fusion1.jpg" width="90px" height="45px" alt="homepage" /></span>
+            </a>
+        </div>
+        <div class="navbar-collapse">
+           <!-- toggle and nav items -->
+
+           <!-- User profile and search -->
+           <ul class="navbar-nav my-lg-0" style="margin-left: 90%;">
+               <!-- Profile -->
+               <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="./assets/images/avatar/5.jpg" alt="user" style="max-width: 40px; max-height: 40px; border-radius: 100%;" class="profile-pic" /></a>
+                 <div class="dropdown-menu dropdown-menu-right animated zoomIn">
+                        <li><a routerLink="/user-login"><i class="fa fa-power-off"></i> Logout</a></li>
+                 </div>
+             </li>
+           </ul>
+       </div>
+       
+        <!-- End Logo -->
+  
+    </nav>
+  </div>
+  <div id="mySidenav" class="sidenav">
+    <ul class="nav navbar-nav">
+        <li class="dropdown">
+            <a data-toggle="dropdown" href="#" style="font-size: 15px;"><i style='font-size:18px' class='fa fa-map'></i><span class="caret"></span></a>
+            <div class="dropdown-menu dropdown-menu-right animated zoomIn" style="margin-left:100px; width: 247%; border-radius: 5px; padding: 20px; background-color: white;">
+                <ul class="dropdown-user" style="width: 200px; background-color: #f6f0e8;">
+                    <h3>Sites</h3>
+    
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid" style="padding-left: 1px;">
+                           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                              <ul class="navbar-nav">
+                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" style="color: black; font-size: 10px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Western Air Command
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: 15px;">
+                                        <li><a style="font-size: 10px;" class="dropdown-item"  (click)="onDropdownChange('Adampur AFS', $event)" href="#">Adampur AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Ambala AFS', $event)" href="#">Ambala AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Amritsar AFS', $event)" href="#">Amritsar AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Awantipur AFS', $event)" href="#">Awantipur AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Bathinda AFS', $event)" href="#">Bathinda AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Chandigarh AFS', $event)" href="#">Chandigarh AFS</a></li>
+                                        <!-- <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Gurugram AFS', $event)" href="#">Gurugram AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Faridabad AFS', $event)" href="#">Faridabad AFS</a></li> -->
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Halwara AFS', $event)" href="#">Halwara AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Hindon AFS', $event)" href="#">Hindon AFS</a></li>
+                                        <!-- <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Vadsar AFS', $event)" href="#">Vadsar AFS</a></li> -->
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Leh AFS', $event)" href="#">Leh AFS</a></li>
+                                        <!-- <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Palam AFS', $event)" href="#">Palam AFS</a></li> -->
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Pathankot AFS', $event)" href="#">Pathankot AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Sarsawa AFS', $event)" href="#">Sarsawa AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Sirsa AFS', $event)" href="#">Sirsa AFS</a></li>
+                                        <!-- <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Srinagar AFS', $event)" href="#">Srinagar AFS</a></li> -->
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Udhampur AFS', $event)" href="#">Udhampur AFS</a></li>
+                                    </ul>
+                                    
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </nav>
+                     <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid" style="margin-top: -50px; padding-left: 1px;">
+                           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                              <ul class="navbar-nav">
+                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" style="color: black; font-size: 10px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Eastern Air Command
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: 15px;">
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Purnea AFS', $event)" href="#">Purnea AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Bagdogra AFS', $event)" href="#">Bagdogra AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Barapani AFS', $event)" href="#">Barapani AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Barrackpore AFS', $event)" href="#">Barrackpore AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Chabua AFS', $event)" href="#">Chabua AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Hasimara AFS', $event)" href="#">Hasimara AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Jorhat AFS', $event)" href="#">Jorhat AFS </a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Kalaikunda AFS', $event)" href="#">Kalaikunda AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Kumbhigram AFS', $event)" href="#">Kumbhigram AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Mohanbari AFS', $event)" href="#">Mohanbari AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Mountain AFS', $event)" href="#">Mountain Shadow AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Panagarh AFS', $event)" href="#">Panagarh AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Tawang AFS', $event)" href="#">Tawang AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Tezpur AFS', $event)" href="#">Tezpur AFS</a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </nav>
+                     <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid" style="margin-top: -50px; padding-left: 1px;">
+                           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                              <ul class="navbar-nav">
+                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" style="color: black; font-size: 10px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Central Air Command
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: 15px;">
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Agra AFS', $event)" href="#">Agra AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Bakshi Ka Talab AFS', $event)" href="#">Bakshi Ka Talab AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Bamrauli AFS', $event)" href="#">Bamrauli AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Bareilly AFS', $event)" href="#">Bareilly AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Bihta AFS', $event)" href="#">Bihta AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Chakeri AFS', $event)" href="#">Chakeri AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Darbhanga AFS', $event)" href="#">Darbhanga AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Gorakhpur AFS', $event)" href="#">Gorakhpur AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Maharajpur AFS', $event)" href="#">Maharajpur AFS</a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </nav>
+                     <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid" style="margin-top: -50px; padding-left: 1px;"> 
+                           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                              <ul class="navbar-nav">
+                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" style="color: black; font-size: 10px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Southern Air Command
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: 15px;">
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Car Nicobar AFS', $event)" href="#">Car Nicobar AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Sulur AFS', $event)" href="#">Sulur AFS </a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Port Blair AFS', $event)" href="#">Port Blair AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Tambaram AFS', $event)" href="#">Tambaram AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Thanjavur AFS', $event)" href="#">Thanjavur AFS </a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Thiruvananthapuram AFS', $event)" href="#">Thiruvananthapuram AFS</a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </nav>
+                          <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid" style="margin-top: -50px; padding-left: 1px;">
+                           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                              <ul class="navbar-nav">
+                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" style="color: black; font-size: 10px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        South Western Air Command
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: 15px;">
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Suratgarh AFS', $event)" href="#">Suratgarh AFS </a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Bhuj AFS', $event)" href="#">Bhuj AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Deesa AFS', $event)" href="#">Deesa AFS </a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Jaisalmer AFS', $event)" href="#">Jaisalmer AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Jamnagar AFS', $event)" href="#">Jamnagar AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Jodhpur AFS', $event)" href="#">Jodhpur AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Lohegaon AFS', $event)" href="#">Lohegaon AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Nal-Bikaner AFS', $event)" href="#">Nal-Bikaner AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Naliya AFS', $event)" href="#">Naliya AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Phalodi AFS', $event)" href="#">Phalodi AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Uttarlai AFS', $event)" href="#">Uttarlai AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Makarpura AFS', $event)" href="#">Makarpura AFS</a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </nav>
+                     <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid" style="margin-top: -70px; padding-left: 1px;">
+                           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                              <ul class="navbar-nav">
+                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" style="color: black; font-size: 10px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Training Command
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: 15px;">
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Begumpet AFS', $event)" href="#">Begumpet AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Bidar AFS', $event)" href="#">Bidar AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Dundigal AFS', $event)" href="#">Dundigal AFS </a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Hakimpet AFS', $event)" href="#">Hakimpet AFS </a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Yelahanka AFS', $event)" href="#">Yelahanka AFS </a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Admin Training Inst, sambra Belgaum', $event)" href="#">Admin Training Inst, sambra Belgaum</a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </nav>
+                     <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid" style="margin-top: -91px; padding-left: 1px;">
+                           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                              <ul class="navbar-nav">
+                                 <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" style="color: black; font-size: 10px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Maintenance Command
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="font-size: 15px;">
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Nagpur AFS', $event)" href="#">Nagpur AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Ojhar AFS', $event)" href="#">Ojhar AFS</a></li>
+                                        <li><a  style="font-size: 10px;" class="dropdown-item" (click)="onDropdownChange('Devlali AFS', $event)" href="#">Devlali AFS</a></li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </nav>
+                </ul>
+            </div>
+        </li>
+        <li class="dropdown">
+               <a data-toggle="dropdown" href="#" style="font-size: 15px;"><i style='font-size:18px;
+                    cursor: auto;' class="fa fa-sitemap"></i><span class="caret"></span></a>
+                      <div class="dropdown-menu dropdown-menu-right animated zoomIn" style="margin-left:100px; width: 480%; border-radius: 5px; padding:34px;height: 312%">
+                         <ul class="dropdown-user" style="width: 400px; background-color: #f6f0e8;">
+                              
+                              <ul _ngcontent-wdm-c19="" class="mega-dropdown-menu row"><h4 _ngcontent-wdm-c19="" class="m-b-20">Site Information</h4>
+                                   <!----><div _ngcontent-wdm-c19="" class="row"><div _ngcontent-wdm-c19="" class="col-lg-12 col-md-12 col-sm-12"><label _ngcontent-wdm-c19="" class="infotags">Site Name</label><label _ngcontent-wdm-c19="" style="float: right;">{{ selectedLocation }}</label></div></div>
+                                   <!----><div _ngcontent-wdm-c19="" class="row"><div _ngcontent-wdm-c19="" class="col-lg-12 col-md-12 col-sm-12"><label _ngcontent-wdm-c19="" class="infotags"></label><label _ngcontent-wdm-c19="" style="float: right;"></label></div></div>
+                                   <!----><div _ngcontent-wdm-c19="" class="row"><div _ngcontent-wdm-c19="" class="col-lg-12 col-md-12 col-sm-12"><label _ngcontent-wdm-c19="" class="infotags"></label><label _ngcontent-wdm-c19="" style="float: right;"></label></div></div>
+                                   <!----></ul>
+                         </ul>
+                    </div>
+          </li>
+          <!-- <li class="dropdown">
+            <a data-toggle="dropdown" href="#" style="font-size: 15px;"><i style='font-size:18px;
+                 cursor: auto;' class="fa fa-line-chart"></i><span class="caret"></span></a>                 
+                   <div class="dropdown-menu dropdown-menu-right animated zoomIn" style="margin-left:100px; margin-top: 130px; width: 600%; border-radius: 5px;">
+                      <ul class="dropdown-user">
+                        <div>
+                           <div _ngcontent-wdm-c19="" class="row"><div _ngcontent-wdm-c19="" class="col-lg-12 col-md-12 col-sm-12"><label _ngcontent-wdm-c19="" class="infotags"><strong style="padding-left: 200px;">Site Name:&nbsp; </strong></label><label _ngcontent-wdm-c19=""> {{ selectedLocation }}</label></div></div>
+                           <div _ngcontent-wdm-c19="" class="row"><div _ngcontent-wdm-c19="" class="col-lg-12 col-md-12 col-sm-12"><label _ngcontent-wdm-c19="" class="infotags"><strong style="padding-left: 200px;">Year:&nbsp; </strong></label><label _ngcontent-wdm-c19="">{{ selectedYear ? selectedYear : 'Select a year' }}</label></div></div>
+                           <canvasjs-chart (chartInstance)="getChartInstance($event)" [options]="chartOptions" [styles]="{height:'400px'}"></canvasjs-chart>     
+                       </div>   
+                      </ul>
+                 </div>
+       </li> -->
+         <div class="row" animated zoomIn [hidden]="slider">
+                    <div class="col-md-12 col-lg-12">
+                      <div class="card animated zoomIn"
+                        style="  padding-left:2px ; padding-bottom:-5px; padding-top:-5px;height: 285px; width: 100px; background-color: #F5F5F5; position: sticky; font-size: 13;">
+                        <ngx-slider class="slider" (userChange)="onYearChange($event)" [(value)]="value" [options]="options"></ngx-slider>
+  
+  
+  
+                        
+                      </div>
+                    </div>
+                  </div>
+    </ul>
+  </div>
+  
+  <div id="map" style="height: 500px; width: calc(82% - 120px); float: left;"></div>
+  <!-- Adjust the width of the map to leave space for the div on the right side -->
+
+  <div id="chartContainer" style="height: 500px; width: 250px; float: left;">
+   <div class="centered-content">
+     <div>
+           <label class="infotags"><strong style="padding-left: 70px;">Site Name: </strong></label>
+           <label>{{ selectedLocation }}</label>
+           <label class="infotags"><strong style="padding-left: 70px;">Year:&nbsp; </strong></label>
+           <label>{{selectedYear}}</label>
+       <canvasjs-chart (chartInstance)="getChartInstance($event)" [options]="chartOptions" [styles]="{height:'400px'}"></canvasjs-chart>
+     </div>
+   </div>
+ </div>
+
+</body>

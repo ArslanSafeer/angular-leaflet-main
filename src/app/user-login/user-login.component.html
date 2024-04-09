@@ -1,0 +1,35 @@
+<body>
+    <div>
+       <div class="wave"></div>
+       <div class="wave"></div>
+       <div class="wave"></div>
+    </div>
+  
+<div class="wrapper" style="background-color: #E6E6FA;">
+    <div class="logo">
+        <img src="./assets/dencefusion_logo.jpg" alt="">
+    </div>
+    <div class="text-center mt-4 name">
+        Dence Fusion
+    </div>
+    <form class="p-3 mt-3" [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="form-field d-flex align-items-center">
+           
+            <input type="text" formControlName="userName" required ngModel placeholder="Username">
+        </div>
+        <div class="form-field d-flex align-items-center">
+        
+            <input type="password" formControlName="password" required ngModel placeholder="Password">
+        </div>
+        <button  type="submit" class="btn btn-success">Login</button><br><br>
+    </form>
+    <div class="text-center fs-6">
+    <a routerLink="/signup" style="color: black; font-size: 15px;">New user? Sign up</a>
+    </div>
+</div>
+<div class="lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</body>

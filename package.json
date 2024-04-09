@@ -1,0 +1,50 @@
+{
+  "name": "angular-leaflet",
+  "version": "1.0.0",
+  "description": "Application example built with Angular 15 and adding the map component using the leaflet library.",
+  "author": "Rodrigo Kamada <rodrigo@kamada.com.br> (https://github.com/rodrigokamada)",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "build:prod": "ng build --configuration production --base-href https://rodrigokamada.github.io/angular-leaflet/",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "test:headless": "ng test --watch=false --browsers=ChromeHeadless"
+  },
+  "dependencies": {
+    "@angular-slider/ngx-slider": "^17.0.1",
+    "@angular/animations": "^17.2.0",
+    "@angular/common": "^15.2.7",
+    "@angular/compiler": "^17.2.0",
+    "@angular/core": "^17.2.0",
+    "@angular/forms": "^17.2.0",
+    "@angular/platform-browser": "^15.2.7",
+    "@angular/platform-browser-dynamic": "^15.2.7",
+    "@angular/router": "^17.2.3",
+    "@canvasjs/angular-charts": "^1.1.5",
+    "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.4",
+    "leaflet": "^1.9.3",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.5.0",
+    "zone.js": "~0.14.3"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^17.2.2",
+    "@angular/cli": "~17.2.2",
+    "@angular/compiler-cli": "^17.2.2",
+    "@types/googlemaps": "^3.43.3",
+    "@types/jasmine": "~4.3.1",
+    "@types/leaflet": "^1.9.3",
+    "jasmine-core": "~4.6.0",
+    "karma": "~6.4.1",
+    "karma-chrome-launcher": "~3.1.1",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "typescript": ">=5.2 <5.4"
+  }
+}

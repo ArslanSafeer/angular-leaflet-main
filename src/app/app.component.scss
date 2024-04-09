@@ -1,0 +1,39 @@
+#map {
+  height: 500px;
+  width: 94.5%;
+  max-width: 100%;
+  margin-left:40px;
+}
+
+
+.slider {
+  /* -webkit-appearance: none; */
+  width: 100%;
+  height: 200px;
+  position: relative;
+  outline: 1;
+  opacity: 1;
+  color: #292928;
+ 
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  color: #292928;
+  background-color: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 17px;
+  height: 17px;
+  color: #292928;
+  background: #04AA6D;
+  cursor: pointer;
+}

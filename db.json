@@ -1,0 +1,28 @@
+{
+  "signupUsers": [
+    {
+      "id": "24df",
+      "userName": "arsalan",
+      "email": "arsalansafeer@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "640d",
+      "userName": "arslan",
+      "email": "arsalansafeer@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "65c0",
+      "userName": "arsalansafeer",
+      "email": "arsalansafeer@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "f16b",
+      "userName": "abc",
+      "email": "arsalansafeer@gmail.com",
+      "password": "12345"
+    }
+  ]
+}
